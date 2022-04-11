@@ -1,4 +1,5 @@
 package RideShareSelector.model;
+import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.springframework.stereotype.Component;
@@ -10,37 +11,38 @@ import java.util.List;
 
 public class MapData {
 
-    private DestinationAddress destination_addresses ;
-    private OriginAddress origin_addresses;
-    private Rows rows;
+    @JsonAlias("destination_addresses")
+    private List<String> destinationAddresses;
 
+    @JsonAlias("origin_addresses")
+    private List<String> originAddresses;
 
-
-    public DestinationAddress getDestination_addresses() {
-        return destination_addresses;
-    }
-
-    public void setDestination_addresses(DestinationAddress destination_addresses) {
-        this.destination_addresses = destination_addresses;
-    }
-
-    public OriginAddress getOrigin_addresses() {
-        return origin_addresses;
-    }
-
-    public void setOrigin_addresses(OriginAddress origin_addresses) {
-        this.origin_addresses = origin_addresses;
-    }
-
-    public Rows getRows() {
-        return rows;
-    }
-
-    public void setRows(Rows rows) {
-        this.rows = rows;
-    }
-
+    private List<Elements> elements;
     private String status;
+
+    public List<String> getDestinationAddresses() {
+        return destinationAddresses;
+    }
+
+    public void setDestinationAddresses(List<String> destinationAddresses) {
+        this.destinationAddresses = destinationAddresses;
+    }
+
+    public List<String> getOriginAddresses() {
+        return originAddresses;
+    }
+
+    public void setOriginAddresses(List<String> originAddresses) {
+        this.originAddresses = originAddresses;
+    }
+
+    public List<Elements> getElements() {
+        return elements;
+    }
+
+    public void setElements(List<Elements> elements) {
+        this.elements = elements;
+    }
 
     public String getStatus() {
         return status;

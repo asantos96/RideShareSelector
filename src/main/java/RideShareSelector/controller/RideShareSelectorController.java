@@ -19,14 +19,15 @@ public class RideShareSelectorController {
     @RequestMapping("/")
     @ResponseBody
 
-    public MapData testMapData() {
+    public String testMapData() {
         apiService mapAPI = new apiService();
         MapData test = mapAPI.accessMapData();
         String currentStatus = test.getStatus();
+        String city = test.getDestinationAddresses().get(0);
 
 
 
-        return test;
+        return city;
     }
 
 

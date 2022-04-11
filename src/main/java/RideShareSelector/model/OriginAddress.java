@@ -1,4 +1,5 @@
 package RideShareSelector.model;
+import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import java.util.List;
@@ -7,13 +8,14 @@ import java.util.List;
 @JsonIgnoreProperties(ignoreUnknown = true)
 
 public class OriginAddress {
-    private List<String> origin_addresses;
+    @JsonAlias("origin_addresses")
+    private List<String> originAddresses;
 
-    public List<String> getOrigin_addresses() {
-        return origin_addresses;
+    public List<String> getOriginAddresses() {
+        return originAddresses;
     }
 
-    public void setOrigin_addresses(List<String> origin_addresses) {
-        this.origin_addresses = origin_addresses;
+    public void setOriginAddresses(List<String> originAddresses) {
+        this.originAddresses = originAddresses;
     }
 }

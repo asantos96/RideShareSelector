@@ -1,6 +1,9 @@
 package RideShareSelector.model;
+import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.PropertyNamingStrategy;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -9,13 +12,14 @@ import java.util.List;
 @JsonIgnoreProperties(ignoreUnknown = true)
 
 public class DestinationAddress {
-    private List<String> destination_addresses;
+    @JsonAlias("destination_addresses")
+    private List<String> destinationAddresses;
 
-    public List<String> getDestination_addresses() {
-        return destination_addresses;
+    public List<String> getDestinationAddresses() {
+        return destinationAddresses;
     }
 
-    public void setDestination_addresses(List<String> destination_addresses) {
-        this.destination_addresses = destination_addresses;
+    public void setDestinationAddresses(List<String> destinationAddresses) {
+        this.destinationAddresses = destinationAddresses;
     }
 }
