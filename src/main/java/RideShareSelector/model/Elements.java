@@ -9,22 +9,22 @@ import java.util.List;
 @JsonIgnoreProperties(ignoreUnknown = true)
 
 public class Elements {
-    private String distance;
-    private String duration;
+    private List<Distance> distance; //List<Distance> distance
+    private List<Duration> duration; //List<Duration> duration
 
-    public String getDistance() {
+    public List<Distance> getDistance() {
         return distance;
     }
 
-    public void setDistance(String distance) {
+    public void setDistance(List<Distance> distance) {
         this.distance = distance;
     }
 
-    public String getDuration() {
+    public List<Duration> getDuration() {
         return duration;
     }
 
-    public void setDuration(String duration) {
+    public void setDuration(List<Duration> duration) {
         this.duration = duration;
     }
 }

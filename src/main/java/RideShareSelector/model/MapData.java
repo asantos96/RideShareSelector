@@ -9,31 +9,44 @@ import java.util.List;
 @JsonIgnoreProperties(ignoreUnknown = true)
 
 public class MapData {
-    private String destination_addresses;
-    private String origins_addresses;
-    private List<Rows> rows;
 
-    public String getDestination_addresses() {
+    private DestinationAddress destination_addresses ;
+    private OriginAddress origin_addresses;
+    private Rows rows;
+
+
+
+    public DestinationAddress getDestination_addresses() {
         return destination_addresses;
     }
 
-    public void setDestination_addresses(String destination_addresses) {
+    public void setDestination_addresses(DestinationAddress destination_addresses) {
         this.destination_addresses = destination_addresses;
     }
 
-    public String getOrigins_addresses() {
-        return origins_addresses;
+    public OriginAddress getOrigin_addresses() {
+        return origin_addresses;
     }
 
-    public void setOrigins_addresses(String origins_addresses) {
-        this.origins_addresses = origins_addresses;
+    public void setOrigin_addresses(OriginAddress origin_addresses) {
+        this.origin_addresses = origin_addresses;
     }
 
-    public List<Rows> getRows() {
+    public Rows getRows() {
         return rows;
     }
 
-    public void setRows(List<Rows> rows) {
+    public void setRows(Rows rows) {
         this.rows = rows;
+    }
+
+    private String status;
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }

@@ -4,7 +4,9 @@ import RideShareSelector.model.MapData;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
+
 @Component
+
 public class apiService {
     public MapData accessMapData(){
     RestTemplate restTemplate = new RestTemplate();
