@@ -21,9 +21,10 @@ public class RideShareSelectorController {
         String city = test.getOriginAddresses().get(0);
 
         String durationTime = test.getRows().get(0).getElements().get(0).getDuration().getText();
+        String distance = test.getRows().get(0).getElements().get(0).getDistance().getText();
 
 
-        return city;
+        return distance;
     }
 
 
