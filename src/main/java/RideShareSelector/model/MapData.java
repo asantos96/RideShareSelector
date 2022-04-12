@@ -17,7 +17,7 @@ public class MapData {
     @JsonAlias("origin_addresses")
     private List<String> originAddresses;
 
-    private List<Elements> elements;
+    private List<Rows> rows;
     private String status;
 
     public List<String> getDestinationAddresses() {
@@ -36,12 +36,12 @@ public class MapData {
         this.originAddresses = originAddresses;
     }
 
-    public List<Elements> getElements() {
-        return elements;
+    public List<Rows> getRows() {
+        return rows;
     }
 
-    public void setElements(List<Elements> elements) {
-        this.elements = elements;
+    public void setRows(List<Rows> rows) {
+        this.rows = rows;
     }
 
     public String getStatus() {
