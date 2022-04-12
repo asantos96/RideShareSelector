@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="originAddress">Choose your Origin:</label>
+<form th:action="@{/destination}"name="submitAddress" method="post">
+    <select id="originAddress" name="originAddress">
+        <option value="234 Main St., Baltimore, MD">234 Main St., Baltimore, MD</option>
+        <option value="345 South St., Baltimore, MD">345 South St., Baltimore, MD</option>
+        <option value="567 Elm St., Baltimore, MD">567 Elm St., Baltimore, MD</option>
+    </select>
+
+
+
+<label for="destinationAddress">Choose your Destination:</label>
+
+<select id="destinationAddress" name="destinationAddress">
+    <option value="234 Main St., Baltimore, MD">234 Main St., Baltimore, MD</option>
+    <option value="345 South St., Baltimore, MD">345 South St., Baltimore, MD</option>
+    <option value="567 Elm St., Baltimore, MD">567 Elm St., Baltimore, MD</option>
+</select>
+    <input type="submit">
+</form>
+
+</body>
+</html>
