@@ -1,0 +1,16 @@
+.textbox {
+    border: thin solid white;
+    text-align: center;
+    color: white;
+
+    background-color: blue;
+    /*opacity: 0.8;*/
+    word-wrap: break-word; /* words won't go from the boundry */
+    /*margin: 200px;*/
+    margin-top: auto;
+    margin-left: 25%;
+    margin-right: 25%;
+    /*padding:100px;*/
+    padding: 25px;
+    border-radius: 30px;
+}

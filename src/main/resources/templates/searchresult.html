@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8/">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="/app.css">
+</head>
+</head>
+<body>
+
+<div>
+
+    <p th:text="${apiKey.status}"></p>
+    <p th:text="${apiKey.originAddresses.get(0)}"></p>
+    <p th:text="${apiKey.destinationAddresses.get(0)}"></p>
+    <p th:text="${apiKey.getRows().get(0).getElements().get(0).getDistance().getText()}"></p>
+    <p th:text="${apiKey.getRows().get(0).getElements().get(0).getDuration().getText()}"></p>
+
+
+
+    <iframe src="https://www.google.com/maps/d/u/0/embed?mid=16IFuf93Y5IMzCCKONyHlJSae9GjIyM4p&ehbc=2E312F" width="640" height="480"></iframe>
+</div>
+
+</body>
+</html>

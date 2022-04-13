@@ -1,11 +1,26 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="UTF-8/">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="/app.css">
 </head>
+<style>
+    body{
+        background-image:url("https://freedesignfile.com/upload/2017/06/Car-travel-with-blurs-background-vector.jpg");
+        text-align: center;
+        font-family: "Gill Sans";
+    }
+
+
+</style>
 <body>
+
+<h1> Welcome driver, please select your client's origin and destination address.</h1>
+<div class="textbox">
+
 <label for="originAddress">Choose your Origin:</label>
+
 <form th:action="@{/destination}"name="submitAddress" method="post">
     <select id="originAddress" name="originAddress">
         <option value="2401 W Belvedere Ave, Baltimore, MD">2401 W Belvedere Ave, Baltimore, MD</option>
@@ -36,6 +51,9 @@
 
 <!--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3080.369212678685!2d-76.82993884898879!3d39.460986979386966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c8161de4709c63%3A0xb52647db3ea7c202!2sMain%20St%2C%20Reisterstown%2C%20MD%2021136!5e0!3m2!1sen!2sus!4v1649859629081!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>-->
 <!--<iframe src="https://www.google.com/maps/dir/?api=1&origin=760+W+Genesee+St+Syracuse+NY+13204&waypoints=314+Avery+Ave+Syracuse+NY+13204|9090+Destiny+USA+Dr+Syracuse+NY+13204" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>-->
-<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1n64H6Zit1gYLSSgx0S23MM98xcUYfhdS&ehbc=2E312F" width="640" height="480"></iframe>
+<!--<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1n64H6Zit1gYLSSgx0S23MM98xcUYfhdS&ehbc=2E312F" width="640" height="480"></iframe>-->
+    <iframe src="https://www.google.com/maps/d/u/0/embed?mid=16IFuf93Y5IMzCCKONyHlJSae9GjIyM4p&ehbc=2E312F" width="640" height="480"></iframe>
+
+</div>
 </body>
 </html>

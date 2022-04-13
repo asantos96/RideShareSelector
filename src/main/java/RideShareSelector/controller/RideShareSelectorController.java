@@ -22,25 +22,24 @@ public class RideShareSelectorController {
         return "test1.html";
     }
 
+    @Autowired
+    private apiService apiService;
+
     @RequestMapping(value = "/destination", method = RequestMethod.POST)
-    @ResponseBody
+
 
     public String testMapData(@RequestParam("destinationAddress") String destinationAddress,
                               @RequestParam("originAddress") String originAddress, ModelMap modelMap) throws UnsupportedEncodingException {
-        apiService mapAPI = new apiService();
-        MapData test = mapAPI.accessMapData(originAddress, destinationAddress);
 
-        //modelMap.put(" ", );
-        String currentStatus = test.getStatus();
-        String city = test.getOriginAddresses().get(0);
-
+        MapData test = apiService.accessMapData(originAddress, destinationAddress);
+        modelMap.put("apiKey", test);
+//        String currentStatus = test.getStatus();
+//        String city = test.getOriginAddresses().get(0);
+//
         String durationTime = test.getRows().get(0).getElements().get(0).getDuration().getText();
-        String distance = test.getRows().get(0).getElements().get(0).getDistance().getText();
+//        String distance = test.getRows().get(0).getElements().get(0).getDistance().getText();
 
-
-        return "Destination Address: " + destinationAddress + " Origin Address: " + originAddress + distance;
+        return "searchresult";
     }
-
-
 
 }
