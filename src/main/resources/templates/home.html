@@ -8,6 +8,17 @@
     <script src="./index.js"></script>
 </head>
 <body>
+
+<form action="/search" >
+    <input name="streetnumberinput" type="search" placeholder="Search street number" required="required" autocomplete="off"/>
+    <!-- <i class="material-icons">search</i> -->
+
+</form>
+
+<p th:text= "${originAddressKey.}" ></p>
+
+
+
 <div id="container">
     <div id="map"></div>
     <div id="sidebar">
