@@ -6,15 +6,28 @@
     <link rel="stylesheet" href="/app.css">
 </head>
 </head>
+
+<style>
+    body{
+        /*background-image:url("https://freedesignfile.com/upload/2017/06/Car-travel-with-blurs-background-vector.jpg");*/
+        background-color: cadetblue;
+        text-align: center;
+        font-family: "Gill Sans";
+    }
+
+
+</style>
+
 <body>
 
-<div>
 
-    <p th:text="${apiKey.status}"></p>
-    <p th:text="${apiKey.originAddresses.get(0)}"></p>
-    <p th:text="${apiKey.destinationAddresses.get(0)}"></p>
-    <p th:text="${apiKey.getRows().get(0).getElements().get(0).getDistance().getText()}"></p>
-    <p th:text="${apiKey.getRows().get(0).getElements().get(0).getDuration().getText()}"></p>
+<div class="textbox">
+<h1> Confirmation </h1>
+
+    <p th:text=" 'Origin Address Selected: ' + ${apiKey.originAddresses.get(0)}"></p>
+    <p th:text=" 'Destination Address Selected: ' + ${apiKey.destinationAddresses.get(0)}"></p>
+    <p th:text=" 'Miles: ' + ${apiKey.getRows().get(0).getElements().get(0).getDistance().getText()}"></p>
+    <p th:text=" 'Time to destination: ' + ${apiKey.getRows().get(0).getElements().get(0).getDuration().getText()}"></p>
 
 
 
