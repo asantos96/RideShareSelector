@@ -4,7 +4,6 @@ import java.util.Arrays;
 import java.util.List;
 
 
-import RideShareSelector.controller.RideShareSelectorController;
 import RideShareSelector.model.Client;
 import RideShareSelector.model.MapData;
 import RideShareSelector.service.apiService;
@@ -44,11 +43,19 @@ public class ClientRepository {
     }//end findByName
 
 
+    //this method outputs the distance between a client origin and destination address
     public String getDistance(String originAddress, String destinationAddress) throws UnsupportedEncodingException {
         apiService getAPI = new apiService();
         MapData testDistance = getAPI.accessMapData(originAddress, destinationAddress);
         String distance = testDistance.getRows().get(0).getElements().get(0).getDistance().getText();
         return distance;
-    }
+    }//end getDistance
+
+    public double calcFare(String distance) {
+        double distanceAsNum = Double.parseDouble(distance.replaceAll("[^0-9\\.]", ""));
+        double fare = distanceAsNum * 7.50;
+
+        return fare;
+    }//end getDistance
 
 }
