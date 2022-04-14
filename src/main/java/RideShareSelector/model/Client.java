@@ -1,7 +1,7 @@
 package RideShareSelector.model;
 
 public class Client {
-    private String name;
+   String name;
     private String originAddress;
     private String destinationAddress;
     private double fare;

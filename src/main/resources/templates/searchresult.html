@@ -23,15 +23,15 @@
 
 <div class="textbox">
 <h1> Confirmation </h1>
-
+    <h3>
     <p th:text=" 'Origin Address Selected: ' + ${apiKey.originAddresses.get(0)}"></p>
     <p th:text=" 'Destination Address Selected: ' + ${apiKey.destinationAddresses.get(0)}"></p>
     <p th:text=" 'Miles: ' + ${apiKey.getRows().get(0).getElements().get(0).getDistance().getText()}"></p>
     <p th:text=" 'Time to destination: ' + ${apiKey.getRows().get(0).getElements().get(0).getDuration().getText()}"></p>
+    <p th:text=" 'Fare: $' + ${fareKey}"></p>
+    </h3>
 
-
-
-    <iframe src="https://www.google.com/maps/d/u/0/embed?mid=16IFuf93Y5IMzCCKONyHlJSae9GjIyM4p&ehbc=2E312F" width="640" height="480"></iframe>
+<!--    <iframe src="https://www.google.com/maps/d/u/0/embed?mid=16IFuf93Y5IMzCCKONyHlJSae9GjIyM4p&ehbc=2E312F" width="640" height="480"></iframe>-->
 </div>
 
 </body>

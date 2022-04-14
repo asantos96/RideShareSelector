@@ -1,4 +1,5 @@
 package RideShareSelector.controller;
+import RideShareSelector.data.ClientRepository;
 import RideShareSelector.model.MapData;
 import RideShareSelector.service.apiService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,14 +33,35 @@ public class RideShareSelectorController {
                               @RequestParam("originAddress") String originAddress, ModelMap modelMap) throws UnsupportedEncodingException {
 
         MapData test = apiService.accessMapData(originAddress, destinationAddress);
+        ClientRepository fare = new ClientRepository();
+        double cost = fare.calcFare(fare.getDistance(originAddress, destinationAddress));
+        modelMap.put("fareKey", cost );
         modelMap.put("apiKey", test);
 //        String currentStatus = test.getStatus();
 //        String city = test.getOriginAddresses().get(0);
 //
         String durationTime = test.getRows().get(0).getElements().get(0).getDuration().getText();
 //        String distance = test.getRows().get(0).getElements().get(0).getDistance().getText();
+//
+        //originAddress and destinationAddress are for the client
+        if (originAddress.equals( "2401 W Belvedere Ave, Baltimore, MD") && destinationAddress.equals("3001 S Hanover St, Baltimore, MD" )) {
+            return "drivertoclient1";
+        }
+        else if (originAddress.equals( "5601 Loch Raven Blvd, Baltimore, MD") && destinationAddress.equals("575 E Ordnance Rd, Glen Burnie, MD" )) {
+            return "drivertoclient2";
+        }
+         else if (originAddress.equals( "900 S Caton Ave, Baltimore, MD") && destinationAddress.equals("501 E Pratt St, Baltimore, MD" )) {
+                return "drivertoclient3";
+        }
+        else {
+            return "searchresult";
+        }
+////        if (originAddress == "4940 Eastern Ave, Baltimore, MD") {
+////            return "drivertoclient2";
+////        }
 
-        return "searchresult";
+
+//        return "searchresult";
     }
 
 }

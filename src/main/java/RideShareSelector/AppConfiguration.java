@@ -6,8 +6,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
 
+import java.util.ArrayList;
 
-    @EnableAutoConfiguration
+
+@EnableAutoConfiguration
     @ComponentScan
     public class AppConfiguration {
         public static void main(String[] args) {

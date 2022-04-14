@@ -11,7 +11,7 @@ import static RideShareSelector.data.ClientRepository.ALL_CLIENTS;
 public class DriverRepository {
     private static final List<Driver> ALL_DRIVERS = Arrays.asList(
             new Driver("Client1", "501 E Pratt St, Baltimore, MD",
-                    "6323 Ritchie Hwy, Glen Burnie, MD", 25.00,  5));
+                    "501 E Pratt St, Baltimore, MD", 25.00,  5));
 
 
 

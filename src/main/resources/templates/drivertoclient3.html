@@ -6,12 +6,25 @@
     <link rel="stylesheet" href="/app.css">
 </head>
 <style>
-    body{
+    body{ /*background-image:url("https://freedesignfile.com/upload/2017/06/Car-travel-with-blurs-background-vector.jpg");*/
+        background-color: cadetblue;
+        text-align: center;
+        font-family: "Gill Sans";
 
     }
 
 </style>
 <body>
-
+<div class="textbox">
+    <h1> Confirmation </h1>
+<h3>
+    <p th:text=" 'Origin Address Selected: ' + ${apiKey.originAddresses.get(0)}"></p>
+    <p th:text=" 'Destination Address Selected: ' + ${apiKey.destinationAddresses.get(0)}"></p>
+    <p th:text=" 'Miles: ' + ${apiKey.getRows().get(0).getElements().get(0).getDistance().getText()}"></p>
+    <p th:text=" 'Time to destination: ' + ${apiKey.getRows().get(0).getElements().get(0).getDuration().getText()}"></p>
+    <p th:text=" 'Fare: $' + ${fareKey}"></p>
+</h3>
+<iframe src="https://www.google.com/maps/d/embed?mid=19VubvcuI-Ysn6bdknlyuEHtRXU5v66vf&ehbc=2E312F" width="640" height="480"></iframe>
+</div>
 </body>
 </html>

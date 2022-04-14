@@ -15,15 +15,15 @@ public class ClientRepository {
 
     static final List<Client> ALL_CLIENTS = Arrays.asList(
             new Client("Client1", "2401 W Belvedere Ave, Baltimore, MD",
-                    "5601 Loch Raven Blvd, Baltimore, MD", 25.00,  5),
+                    "3001 S Hanover St, Baltimore, MD", 25.00,  5),
 
 
-            new Client("Client2", "900 S Caton Ave, Baltimore, MD",
-                    "4940 Eastern Ave, Baltimore, MD", 25.00,  5),
+            new Client("Client2", "5601 Loch Raven Blvd, Baltimore, MD",
+                    "575 E Ordnance Rd, Glen Burnie, MD", 25.00,  5),
 
 
-            new Client("Client3", "3001 S Hanover St, Baltimore, MD",
-                    "575 E Ordnance Rd, Glen Burnie, MD", 25.00,  5));
+            new Client("Client3", "900 S Caton Ave, Baltimore, MD",
+                    "501 E Pratt St, Baltimore, MD", 25.00,  5));
 
 
 
