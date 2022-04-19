@@ -56,9 +56,7 @@ public class RideShareSelectorController {
         else {
             return "searchresult";
         }
-////        if (originAddress == "4940 Eastern Ave, Baltimore, MD") {
-////            return "drivertoclient2";
-////        }
+
 
 
 //        return "searchresult";
