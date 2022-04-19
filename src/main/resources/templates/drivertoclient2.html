@@ -23,6 +23,7 @@
     <p th:text=" 'Miles: ' + ${apiKey.getRows().get(0).getElements().get(0).getDistance().getText()}"></p>
     <p th:text=" 'Time to destination: ' + ${apiKey.getRows().get(0).getElements().get(0).getDuration().getText()}"></p>
     <p th:text=" 'Fare: $' + ${fareKey}"></p>
+    <p th:text=" 'Rating: ' + ${ratingKey.allClients.get(1).getRating()} +'/5'"></p>
 </h3>
 <iframe src="https://www.google.com/maps/d/embed?mid=1X1wa0u-wW46qBaybtnJ5vqRNzg4yhQA3&ehbc=2E312F" width="640" height="480"></iframe>
 </div>

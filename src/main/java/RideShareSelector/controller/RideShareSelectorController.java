@@ -35,8 +35,10 @@ public class RideShareSelectorController {
         MapData test = apiService.accessMapData(originAddress, destinationAddress);
         ClientRepository fare = new ClientRepository();
         double cost = fare.calcFare(fare.getDistance(originAddress, destinationAddress));
+
         modelMap.put("fareKey", cost );
         modelMap.put("apiKey", test);
+        modelMap.put("ratingKey", fare);
 //        String currentStatus = test.getStatus();
 //        String city = test.getOriginAddresses().get(0);
 //

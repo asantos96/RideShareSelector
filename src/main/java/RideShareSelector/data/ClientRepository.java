@@ -19,11 +19,11 @@ public class ClientRepository {
 
 
             new Client("Client2", "5601 Loch Raven Blvd, Baltimore, MD",
-                    "575 E Ordnance Rd, Glen Burnie, MD", 25.00,  5),
+                    "575 E Ordnance Rd, Glen Burnie, MD", 25.00,  4),
 
 
             new Client("Client3", "900 S Caton Ave, Baltimore, MD",
-                    "501 E Pratt St, Baltimore, MD", 25.00,  5));
+                    "501 E Pratt St, Baltimore, MD", 25.00,  4));
 
 
 
